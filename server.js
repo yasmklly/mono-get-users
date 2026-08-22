@@ -1,14 +1,14 @@
 import http from 'node:http';
 
 const users = [{
-  name: 'Alex Bessa',
-  email: 'alex@email.com'
+  name: 'Yasmim Mikelly',
+  email: 'yasmim@email.com'
 }, {
-  name: 'Valdiana Bessa',
-  email: 'valdiana@email.com'
+  name: 'Ravena',
+  email: 'ravena@email.com'
 }, {
-  name: 'Ana Bessa',
-  email: 'ana@email.com'
+  name: 'Rihanna',
+  email: 'rihanna@email.com'
 }];
 
 http.createServer((request, response) => {
