@@ -14,14 +14,10 @@ button.addEventListener('click', async (event) => {
   const response = await fetch('http://localhost:3000/users');
   const data = await response.json();
 
-  let found = false;
+  const user = data.find(user => user.email === inputValue);
 
-  for (let i = 0; i < data.length; i++) {
-    if (inputValue === data[i].email) {
-      paragraph.textContent = `Usuário ${data[i].name} encontrado.`;
-      found = true;
-    }
+  if (!user) {
+    return paragraph.textContent = `Usuário não encontrado.`;
   }
-
-  if (!found) paragraph.textContent = `Usuário não encontrado.`;
+  paragraph.textContent = `Usuário ${user.name} encontrado.`;
 });
